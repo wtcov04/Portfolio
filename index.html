@@ -6,6 +6,77 @@
   <title>William Tran | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #f5f7fa;
+      color: #333;
+    }
+    header {
+      background: #111;
+      color: #fff;
+      padding: 1rem 0;
+    }
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .logo {
+      font-size: 1.8rem;
+      margin: 0;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      margin-left: 2rem;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+    #hero {
+      background: linear-gradient(to right, #2f80ed, #56ccf2);
+      color: #fff;
+      text-align: center;
+      padding: 4rem 0;
+    }
+    section {
+      padding: 3rem 0;
+    }
+    .project-card {
+      background: #fff;
+      padding: 2rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .project-card img {
+      width: 100%;
+      max-width: 300px;
+      margin: 1rem;
+      border-radius: 5px;
+    }
+    .screenshots {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -24,15 +95,15 @@
 
   <section id="hero">
     <div class="container">
-      <h2>Hi, I'm William</h2>
-      <p>A final-year Computer Science student passionate about developing full-stack apps and analytics platforms to solve real-world problems.</p>
+      <h2>Hello, I'm William</h2>
+      <p>Final-year Computer Science student specialising in full-stack development, real-time data apps, and API-driven analytics.</p>
     </div>
   </section>
 
   <section id="about">
     <div class="container">
       <h2>About Me</h2>
-      <p>Currently in my final year at Goldsmiths University, I specialise in web development, API integration, and building tools that improve digital workflows. My most recent project, <strong>SocialScope</strong>, is a research-oriented social media analytics platform designed to help influencers interpret their engagement data using real-time insights.</p>
+      <p>Currently studying at Goldsmiths, University of London, I focus on web applications that deliver real value. My capstone project, <strong>SocialScope</strong>, combines third-party APIs and data visualisation to simplify social media analytics for influencers and marketers.</p>
     </div>
   </section>
 
@@ -40,43 +111,45 @@
     <div class="container">
       <h2>Skills</h2>
       <ul>
-        <li><strong>Languages:</strong> JavaScript, Python, HTML, CSS, SQL</li>
-        <li><strong>Frameworks:</strong> Flask, Node.js, Express.js, Chart.js, React</li>
-        <li><strong>APIs & Tools:</strong> Firebase, RapidAPI, Git, WeasyPrint</li>
-        <li><strong>Database:</strong> MySQL, Firebase Realtime DB</li>
-        <li><strong>Deployment:</strong> GitHub, Render, Clever Cloud</li>
+        <li><strong>Languages:</strong> Python, JavaScript, HTML, CSS, SQL</li>
+        <li><strong>Frameworks:</strong> Flask, React, Node.js, Express.js</li>
+        <li><strong>Tools:</strong> Firebase, Chart.js, Git, WeasyPrint, RapidAPI</li>
+        <li><strong>Databases:</strong> Firebase Realtime DB, MySQL</li>
+        <li><strong>Deployment:</strong> Render, GitHub, Clever Cloud</li>
       </ul>
     </div>
   </section>
 
   <section id="projects">
     <div class="container">
-      <h2>Highlighted Project</h2>
+      <h2>Featured Project: SocialScope</h2>
       <div class="project-card">
-        <h3>Final Year Project: SocialScope</h3>
+        <h3>SocialScope - Social Media Analytics Tool</h3>
         <p><strong>Live Demo:</strong> <a href="https://socialscope.onrender.com" target="_blank">socialscope.onrender.com</a></p>
-        <p><strong>GitHub Repo:</strong> <a href="https://github.com/wtcov04/SocialScope" target="_blank">github.com/wtcov04/SocialScope</a></p>
-        <p><strong>Video Demo:</strong> <a href="https://youtu.be/cu5dUDfViNo" target="_blank">Watch on YouTube</a></p>
-        <p>SocialScope is a full-stack web application that allows users to input a TikTok or Instagram username and receive real-time analytics pulled from third-party APIs. It visualises profile metrics, post performance, engagement rates, and hashtag trends. Features include PDF report generation, Firebase login, and a benchmarking tool comparing user data to industry averages.</p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/wtcov04/SocialScope" target="_blank">github.com/wtcov04/SocialScope</a></p>
+        <p><strong>Video Demo:</strong> <a href="https://youtu.be/cu5dUDfViNo" target="_blank">YouTube</a></p>
+        <p>SocialScope is a research-based analytics app that visualises TikTok and Instagram data including engagement rates, post trends, sentiment analysis, and hashtag benchmarking. It includes a Firebase-secured login system, interactive Chart.js graphs, and generates downloadable PDF reports using WeasyPrint.</p>
         <div class="screenshots">
-          <img src="picture3.png" alt="SocialScope Dashboard" />
-          <img src="picture2.png" alt="SocialScope Chart Customisation" />
-          <img src="picture1.png" alt="SocialScope TikTok Visualisation" />
+          <img src="assets/home_page.png" alt="Home page" />
+          <img src="assets/tiktok_profile.png" alt="TikTok Profile" />
+          <img src="assets/graph.png" alt="Engagement Graph" />
+          <img src="assets/recent_videos.png" alt="Recent Videos" />
         </div>
       </div>
 
       <h2>Other Projects</h2>
+
       <div class="project-card">
-        <h3>Year 2: Event Planner</h3>
-        <p>Web app for planning and managing personal events and tasks.</p>
-        <p><strong>Technologies:</strong> Node.js, Express.js, SQL</p>
+        <h3>Event Planner (Year 2)</h3>
+        <p>Created a scheduling tool for managing personal or team-based events with task tracking functionality.</p>
+        <p><strong>Tech:</strong> Node.js, SQL, Express.js</p>
         <a href="https://github.com/wtcov04/Event-Planner" target="_blank">View on GitHub</a>
       </div>
 
       <div class="project-card">
-        <h3>Year 1: Drawing App</h3>
-        <p>A browser-based digital canvas for sketching and doodling.</p>
-        <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+        <h3>Drawing App (Year 1)</h3>
+        <p>Developed a fun and minimal drawing app directly in the browser.</p>
+        <p><strong>Tech:</strong> HTML5, CSS3, Vanilla JavaScript</p>
         <a href="https://github.com/wtcov04/Drawing-App" target="_blank">View on GitHub</a>
       </div>
     </div>
@@ -85,14 +158,14 @@
   <section id="contact">
     <div class="container">
       <h2>Contact</h2>
-      <p>For collaboration, employment, or questions, feel free to email me:</p>
+      <p>Looking to collaborate or hire? Let's connect:</p>
       <p><a href="mailto:wt.cov@hotmail.com">wt.cov@hotmail.com</a></p>
     </div>
   </section>
 
   <footer>
     <div class="container">
-      <p>&copy; 2025 William Tran. Designed with passion and attention to detail.</p>
+      <p>&copy; 2025 William Tran | Built with HTML, CSS, and a lot of debugging.</p>
     </div>
   </footer>
 </body>
