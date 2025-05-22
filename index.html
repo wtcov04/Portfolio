@@ -1,93 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Portfolio - Computer Science Projects</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>William Tran | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1 class="logo">William Tran</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <header>
+    <div class="container">
+      <h1 class="logo">William Tran</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <section id="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h2>Welcome to My Portfolio</h2>
-                <p>Explore the work I’ve done in the field of Computer Science during my studies at University.</p>
-            </div>
-        </div>
-    </section>
+  <section id="hero">
+    <div class="container">
+      <h2>Hi, I'm William</h2>
+      <p>A final-year Computer Science student passionate about developing full-stack apps and analytics platforms to solve real-world problems.</p>
+    </div>
+  </section>
 
-    <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>Hi! I'm William, a third-year Computer Science student at Goldsmiths University. I’m passionate about software development, web applications, and solving real-world problems through technology. Here you can find the projects I’ve worked on over the last two years during my studies. Feel free to explore my portfolio!</p>
-        </div>
-    </section>
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>Currently in my final year at Goldsmiths University, I specialise in web development, API integration, and building tools that improve digital workflows. My most recent project, <strong>SocialScope</strong>, is a research-oriented social media analytics platform designed to help influencers interpret their engagement data using real-time insights.</p>
+    </div>
+  </section>
 
-    <section id="skills">
-        <div class="container">
-            <h2>Skills</h2>
-            <p>Over the course of my studies, I have gained experience in several key areas of computer science:</p>
-            <ul>
-                <li><strong>Programming Languages:</strong> JavaScript, Python, HTML, CSS, SQL</li>
-                <li><strong>Frameworks & Libraries:</strong> Node.js, Express.js, Passport.js, React.js, Flask</li>
-                <li><strong>Database Management:</strong> MySQL, PostgreSQL</li>
-                <li><strong>Tools & Technologies:</strong> Git, GitHub, npm, Docker</li>
-                <li><strong>Machine Learning:</strong> TensorFlow, Scikit-learn</li>
-            </ul>
-        </div>
-    </section>
+  <section id="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <ul>
+        <li><strong>Languages:</strong> JavaScript, Python, HTML, CSS, SQL</li>
+        <li><strong>Frameworks:</strong> Flask, Node.js, Express.js, Chart.js, React</li>
+        <li><strong>APIs & Tools:</strong> Firebase, RapidAPI, Git, WeasyPrint</li>
+        <li><strong>Database:</strong> MySQL, Firebase Realtime DB</li>
+        <li><strong>Deployment:</strong> GitHub, Render, Clever Cloud</li>
+      </ul>
+    </div>
+  </section>
 
-    <section id="projects">
-        <div class="container">
-            <h2>My Projects</h2>
-            
-            <!-- Year 1 Project: Draw App -->
-            <div class="project-card">
-                <h3>Year 1: Draw App</h3>
-                <img src="Draw-app_image.png" alt="Draw App Home Screen" class="project-img">
-                <p>A web-based drawing application built using JavaScript, HTML, and CSS. The app allows users to draw on a canvas, using tools like pencil, eraser, and spray can.</p>
-                <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
-                <p><strong>View on GitHub:</strong> <a href="https://github.com/wtcov04/Drawing-App.git" target="_blank">GitHub Repository</a></p>
-            </div>
-            
-            <!-- Year 2 Project: Event Planner -->
-            <div class="project-card">
-                <h3>Year 2: Event Planner</h3>
-                <img src="Event-Planner_Homepage.png" alt="Event Planner Home Page" class="project-img">
-                <p>An event planning web application developed with Node.js and Express. The app allows users to create events, add tasks, and manage their schedules.</p>
-                <p><strong>Technologies:</strong> Node.js, Express.js, Passport.js, SQL</p>
-                <p><strong>View on GitHub:</strong> <a href="https://github.com/wtcov04/Event-Planner.git" target="_blank">GitHub Repository</a></p>
-            </div>
+  <section id="projects">
+    <div class="container">
+      <h2>Highlighted Project</h2>
+      <div class="project-card">
+        <h3>Final Year Project: SocialScope</h3>
+        <p><strong>Live Demo:</strong> <a href="https://socialscope.onrender.com" target="_blank">socialscope.onrender.com</a></p>
+        <p><strong>GitHub Repo:</strong> <a href="https://github.com/wtcov04/SocialScope" target="_blank">github.com/wtcov04/SocialScope</a></p>
+        <p><strong>Video Demo:</strong> <a href="https://youtu.be/cu5dUDfViNo" target="_blank">Watch on YouTube</a></p>
+        <p>SocialScope is a full-stack web application that allows users to input a TikTok or Instagram username and receive real-time analytics pulled from third-party APIs. It visualises profile metrics, post performance, engagement rates, and hashtag trends. Features include PDF report generation, Firebase login, and a benchmarking tool comparing user data to industry averages.</p>
+        <div class="screenshots">
+          <img src="picture3.png" alt="SocialScope Dashboard" />
+          <img src="picture2.png" alt="SocialScope Chart Customisation" />
+          <img src="picture1.png" alt="SocialScope TikTok Visualisation" />
         </div>
-    </section>
+      </div>
 
-    <section id="contact">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>If you'd like to get in touch, please feel free to email me at wt.cov@hotmail.com</p>
-        </div>
-    </section>
+      <h2>Other Projects</h2>
+      <div class="project-card">
+        <h3>Year 2: Event Planner</h3>
+        <p>Web app for planning and managing personal events and tasks.</p>
+        <p><strong>Technologies:</strong> Node.js, Express.js, SQL</p>
+        <a href="https://github.com/wtcov04/Event-Planner" target="_blank">View on GitHub</a>
+      </div>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 William Tran. All rights reserved.</p>
-        </div>
-    </footer>
+      <div class="project-card">
+        <h3>Year 1: Drawing App</h3>
+        <p>A browser-based digital canvas for sketching and doodling.</p>
+        <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+        <a href="https://github.com/wtcov04/Drawing-App" target="_blank">View on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>For collaboration, employment, or questions, feel free to email me:</p>
+      <p><a href="mailto:wt.cov@hotmail.com">wt.cov@hotmail.com</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 William Tran. Designed with passion and attention to detail.</p>
+    </div>
+  </footer>
 </body>
 </html>
