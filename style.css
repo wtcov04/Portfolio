@@ -175,6 +175,10 @@ ul li {
   text-decoration: underline;
 }
 
+.screenshots-large img {
+  max-width: 400px;
+}
+
 .screenshots img {
   max-width: 100%;
   margin: 10px;
