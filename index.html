@@ -202,18 +202,36 @@
     <div class="container">
       <h2>Featured Project: SocialScope</h2>
       <div class="project-card">
-        <h3>SocialScope - Social Media Analytics Tool</h3>
+        <h3>SocialScope – Research-Focused Social Media Analytics Tool</h3>
         <p><strong>Live Demo:</strong> <a href="https://socialscope.onrender.com" target="_blank">socialscope.onrender.com</a></p>
         <p><strong>GitHub:</strong> <a href="https://github.com/wtcov04/SocialScope" target="_blank">github.com/wtcov04/SocialScope</a></p>
         <p><strong>Video Demo:</strong> <a href="https://youtu.be/cu5dUDfViNo" target="_blank">YouTube</a></p>
-        <p>SocialScope is a research-based analytics app that visualises TikTok and Instagram data including engagement rates, post trends, sentiment analysis, and hashtag benchmarking. It includes a Firebase-secured login system, interactive Chart.js graphs, and generates downloadable PDF reports using WeasyPrint.</p>
+        <p><strong>Description:</strong> SocialScope is a web-based analytics platform designed to provide TikTok and Instagram insights without needing official API access or a business account. Created as a research-driven alternative to enterprise tools like Hootsuite and Meta Business Suite, it helps influencers and casual users analyse performance using public data.</p>
+      
+        <p><strong>Core Features:</strong></p>
+        <ul>
+          <li><strong>Firebase Authentication:</strong> Secure login, session management, and profile saving functionality.</li>
+          <li><strong>Profile Search:</strong> Retrieve real-time metrics like follower count, engagement rate, and bio from TikTok and Instagram using third-party APIs.</li>
+          <li><strong>Visual Analytics:</strong> Interactive Chart.js graphs with support for bar, pie, and line charts. Users can customise views and metrics.</li>
+          <li><strong>Hashtag Trends:</strong> PyTrends integration enables real-time tracking of hashtag popularity over time.</li>
+          <li><strong>Benchmarking:</strong> Users can compare their analytics with normalised industry averages (e.g., likes, growth, engagement).</li>
+          <li><strong>PDF Reports:</strong> Analytics pages can be exported to professional-quality PDF reports using WeasyPrint, embedding real-time charts and metrics.</li>
+        </ul>
+      
+        <p><strong>Evaluation & Testing:</strong> The platform was tested with 20 users (9 influencers, 11 general users). Influencers appreciated the PDF export and saved profile features, while casual users praised its simplicity and chart interactivity. Survey insights and structured testing informed iterative UI and performance improvements.</p>
+      
+        <p><strong>Technologies:</strong> Flask (backend), Chart.js, Firebase (auth & DB), HTML/CSS/JS, RapidAPI (Instagram + TikTok), WeasyPrint, PyTrends</p>
+      
         <div class="screenshots">
-          <img src="home_page.png" alt="Home page" />
-          <img src="tiktok_profile.png" alt="TikTok Profile" />
-          <img src="graph.png" alt="Engagement Graph" />
-          <img src="recent_videos.png" alt="Recent Videos" />
+          <img src="home_page.png" alt="Home Page" />
+          <img src="tiktok_profile.png" alt="TikTok Profile View" />
+          <img src="graph.png" alt="Chart View - Engagement Data" />
+          <img src="recent_videos.png" alt="Recent TikTok Videos Analytics" />
+          <img src="Event-Planner_Homepage.png" alt="Benchmarking Feature" />
+          <img src="Draw-app_image.png" alt="PDF Export Screenshot" />
         </div>
       </div>
+
 
       <h2>Other Projects</h2>
 
