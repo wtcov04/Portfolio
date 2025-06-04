@@ -1,8 +1,13 @@
+/* Global Reset and Font */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -12,12 +17,14 @@ body {
   line-height: 1.6;
 }
 
+/* Container */
 .container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
+/* Header */
 header {
   background-color: #222;
   color: white;
@@ -35,14 +42,18 @@ header .logo {
   letter-spacing: 2px;
 }
 
-header nav ul {
-  list-style: none;
-  text-align: right;
+/* Navigation */
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-header nav ul li {
-  display: inline-block;
-  margin-left: 30px;
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
 }
 
 header nav ul li a {
@@ -52,11 +63,14 @@ header nav ul li a {
   transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
-header nav ul li a:hover {
+header nav ul li a:hover,
+header nav ul li a:focus {
   color: #ffcc00;
   text-decoration: underline;
+  outline: none;
 }
 
+/* Hero Section */
 #hero {
   background: linear-gradient(135deg, #007bff, #00c6ff);
   color: white;
@@ -71,10 +85,8 @@ header nav ul li a:hover {
 
 #hero p {
   font-size: 1.3em;
-  margin-bottom: 40px;
+  margin: 0 auto 40px auto;
   max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .cta-button {
@@ -84,10 +96,9 @@ header nav ul li a:hover {
   font-size: 1.2em;
   text-decoration: none;
   border-radius: 8px;
-  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-  margin-top: 15px;
-  display: inline-block;
   border: 2px solid transparent;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
 }
 
 .cta-button:hover {
@@ -97,16 +108,30 @@ header nav ul li a:hover {
   border-color: #0f5dc3;
 }
 
+/* Sections */
 section {
   padding: 80px 0;
   background-color: #ffffff;
   border-bottom: 1px solid #ddd;
+  animation: fadeIn 0.8s ease-in;
 }
 
 section:nth-of-type(even) {
   background-color: #f9f9f9;
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Headings and Paragraphs */
 h2 {
   font-size: 2.5em;
   margin-bottom: 30px;
@@ -129,6 +154,7 @@ ul li {
   margin-bottom: 10px;
 }
 
+/* Project Cards */
 .project-card {
   background-color: #fff;
   padding: 25px;
@@ -163,11 +189,12 @@ ul li {
   text-decoration: underline;
 }
 
+/* Image Layout */
 .project-card img,
 .screenshots img,
 .screenshots-large img {
   width: 100%;
-  max-width: 100%; 
+  max-width: 100%;
   height: auto;
   display: block;
   margin: 1.5rem auto;
@@ -176,13 +203,21 @@ ul li {
   transition: transform 0.3s ease;
 }
 
-
 .project-card img:hover,
 .screenshots img:hover,
 .screenshots-large img:hover {
   transform: scale(1.03);
 }
 
+.screenshots,
+.screenshots-large {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 20px;
+}
+
+/* Footer */
 footer {
   background-color: #222;
   color: white;
@@ -190,4 +225,33 @@ footer {
   text-align: center;
   border-top: 2px solid #444;
   font-size: 0.95em;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  header nav ul li {
+    display: block;
+    margin-left: 0;
+  }
+
+  #hero h2 {
+    font-size: 2em;
+  }
+
+  .project-card {
+    padding: 20px;
+  }
+
+  .cta-button {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
 }
