@@ -257,8 +257,8 @@ footer {
 }
 
 .project-img {
-  max-width: 400px;
-  width: 100%;
+  max-width: 200px;
+  width: 50%;
   display: block;
   margin: 1.5rem auto;
   border-radius: 12px;
