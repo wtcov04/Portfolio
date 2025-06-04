@@ -5,84 +5,162 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>William Tran | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
   <style>
-    body {
-      font-family: 'Roboto', sans-serif;
+    :root {
+      --primary: #2f80ed;
+      --secondary: #56ccf2;
+      --text-dark: #333;
+      --text-light: #fff;
+      --bg-light: #f5f7fa;
+      --bg-dark: #111;
+      --accent: #444;
+    }
+
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: var(--bg-light);
+      color: var(--text-dark);
       line-height: 1.6;
-      background: #f5f7fa;
-      color: #333;
     }
+
     header {
-      background: #111;
-      color: #fff;
-      padding: 1rem 0;
+      background: var(--bg-dark);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
     }
+
     .container {
       width: 90%;
       max-width: 1000px;
-      margin: 0 auto;
+      margin: auto;
+      padding: 1rem 0;
     }
+
     .logo {
       font-size: 1.8rem;
-      margin: 0;
+      color: var(--text-light);
+      font-weight: bold;
     }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
     nav ul {
       list-style: none;
       display: flex;
-      justify-content: flex-end;
-      margin: 0;
-      padding: 0;
     }
+
     nav ul li {
       margin-left: 2rem;
     }
+
     nav ul li a {
-      color: #fff;
+      color: var(--text-light);
       text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
     }
+
+    nav ul li a:hover {
+      color: var(--secondary);
+    }
+
     #hero {
-      background: linear-gradient(to right, #2f80ed, #56ccf2);
-      color: #fff;
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      color: var(--text-light);
       text-align: center;
-      padding: 4rem 0;
+      padding: 5rem 1rem;
     }
+
     section {
       padding: 3rem 0;
     }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
     .project-card {
       background: #fff;
       padding: 2rem;
       margin: 2rem 0;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
     }
-    .project-card img {
-      width: 100%;
-      max-width: 300px;
-      margin: 1rem;
-      border-radius: 5px;
+
+    .project-card h3 {
+      margin-bottom: 0.5rem;
     }
+
+    .project-card a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: bold;
+      transition: opacity 0.2s ease;
+    }
+
+    .project-card a:hover {
+      opacity: 0.8;
+    }
+
     .screenshots {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1rem;
+      margin-top: 1.5rem;
     }
+
+    .screenshots img {
+      width: 100%;
+      border-radius: 6px;
+      object-fit: cover;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
     footer {
       background: #222;
-      color: #fff;
+      color: var(--text-light);
       text-align: center;
-      padding: 1rem;
+      padding: 1.5rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: flex-end;
+        margin-top: 1rem;
+      }
+
+      nav ul li {
+        margin: 0.5rem 0;
+      }
     }
   </style>
 </head>
 <body>
   <header>
     <div class="container">
-      <h1 class="logo">William Tran</h1>
       <nav>
+        <div class="logo">William Tran</div>
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
@@ -129,39 +207,38 @@
         <p><strong>GitHub:</strong> <a href="https://github.com/wtcov04/SocialScope" target="_blank">github.com/wtcov04/SocialScope</a></p>
         <p><strong>Video Demo:</strong> <a href="https://youtu.be/cu5dUDfViNo" target="_blank">YouTube</a></p>
         <p>SocialScope is a research-based analytics app that visualises TikTok and Instagram data including engagement rates, post trends, sentiment analysis, and hashtag benchmarking. It includes a Firebase-secured login system, interactive Chart.js graphs, and generates downloadable PDF reports using WeasyPrint.</p>
-        <div class="screenshots screenshots-large">
+        <div class="screenshots">
           <img src="home_page.png" alt="Home page" />
           <img src="tiktok_profile.png" alt="TikTok Profile" />
           <img src="graph.png" alt="Engagement Graph" />
           <img src="recent_videos.png" alt="Recent Videos" />
         </div>
       </div>
-  
+
       <h2>Other Projects</h2>
-  
+
       <div class="project-card">
         <h3>Event Planner (Year 2)</h3>
         <p>Created a scheduling tool for managing personal or team-based events with task tracking functionality.</p>
         <p><strong>Tech:</strong> Node.js, SQL, Express.js</p>
-        <img src="Event-Planner_Homepage.png" alt="Event Planner Screenshot">
+        <img src="Event-Planner_Homepage.png" alt="Event Planner Screenshot" />
         <a href="https://github.com/wtcov04/Event-Planner" target="_blank">View on GitHub</a>
       </div>
-  
+
       <div class="project-card">
         <h3>Drawing App (Year 1)</h3>
         <p>Developed a fun and minimal drawing app directly in the browser.</p>
         <p><strong>Tech:</strong> HTML5, CSS3, Vanilla JavaScript</p>
-        <img src="Draw-app_image.png" alt="Drawing App Screenshot">
+        <img src="Draw-app_image.png" alt="Drawing App Screenshot" />
         <a href="https://github.com/wtcov04/Drawing-App" target="_blank">View on GitHub</a>
       </div>
     </div>
   </section>
 
-
   <section id="contact">
     <div class="container">
       <h2>Contact</h2>
-      <p>Looking to collaborate or hire? Let's connect:</p>
+      <p>Looking to collaborate or hire? Let’s connect:</p>
       <p><a href="mailto:wt.cov@hotmail.com">wt.cov@hotmail.com</a></p>
     </div>
   </section>
